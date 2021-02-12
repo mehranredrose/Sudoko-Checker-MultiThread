@@ -137,7 +137,7 @@ while ans:
     ans=input("What would you like to do? ")
     if ans=="1":
             grid = copy.copy(empty)
-            solve(empty)
+            solve(grid)
             
     elif ans=="2":
       print('\n ""Not available at the moment""\n\n')
