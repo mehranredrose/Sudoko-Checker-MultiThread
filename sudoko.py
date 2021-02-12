@@ -1,5 +1,5 @@
 import numpy as np
-
+import threading as th
 grid=[[5,3,0,0,7,0,0,0,0],
       [6,0,0,1,9,5,0,0,0],
       [0,9,8,0,0,0,0,6,0],
@@ -31,4 +31,13 @@ def possible (row ,column,number):
             if grid[i+ section_y][j + section_x]== number :
                 return False
 
-    return True
+    return True 
+
+def input_checker(x):#for checking that input is in range of 1-9
+    for i in range(1,10):
+        if i==x:
+            return True
+    return False
+    
+
+
