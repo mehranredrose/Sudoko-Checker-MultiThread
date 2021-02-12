@@ -16,6 +16,12 @@ print(np.matrix(grid))
 def possible (row ,column,number):
     global grid
     #is number apearing in the given row?
+    for i in range(0,9):
+        if grid[row][i] == number :
+            return False
     #is number apearing in the given column?
+    for i in range(0,9):
+        if grid[i][column] == number :
+            return False
     #is number apearing in the given square?
 
