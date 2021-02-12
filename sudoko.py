@@ -24,4 +24,11 @@ def possible (row ,column,number):
         if grid[i][column] == number :
             return False
     #is number apearing in the given square?
+    section_x = (column//3) * 3 #it devide the main square into 3 section in x   
+    section_y = (row//3) * 3 #it devide the main Square into 3 section in y
+    for i in range(0,3):#for 3 rows of each square
+        for j in range(0,3):#for 3 columns of each square :)
+            if grid[i+ section_y][j + section_x]== number :
+                return False
 
+    return True
